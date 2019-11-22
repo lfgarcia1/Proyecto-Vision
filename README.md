@@ -17,4 +17,5 @@
           - `interacciones_headpose.npy`: Lista de tuplas de interacciones que indican que persona en la foto interactuó con quien (Ej: [(p1, p2), (p3, p4)] indica que p1 interactuó con p2 y p3 con p4) CADA ENTRADA EN LA TUPLA CORRESPONDE AL NUMERO DE FILA DE LA PERSONA EN `bounding_boxes.npy`
           - `identidades.npy`: (Se calcula al final final) Lista que asocia cada una de las filas de `bounding_boxes.npy` con una identidad de una persona (ej: Tony Stark)
   - `Personas`
-    - (persona_xxx.npy): recolecta todos los descriptores de una persona en particular
+    - (Nombre de metodo de detección): Puede ser `RetinaFace` o `dlib`
+      - (persona_xxx.npy): recolecta todos los descriptores de una persona en particular
