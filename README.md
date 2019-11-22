@@ -17,6 +17,7 @@
       - (Nombre de video)
         - (Número de frame)
           - `bounding_boxes.npy`: Matriz donde las filas sean los bounding boxes de las caras, y las columnas sean: coordenada x de esquina sup izquierda, coordenada y de esquina sup izquierda, ancho y alto (en este orden)
+          - `Faces`: Carpeta con caras croppeadas (nombre tiene que ser `xx.jpg`, donde `xx` es el número de fila en `bounding_boxes.npy`)
           - `descriptores.npy`: Cada fila es un descriptor obtenido con arcface de una de las caras (deben ser en el mismo orden de las caras en `bounding_boxes.npy`)
           - `landmarks.npy`: Lista donde cada entrada corresponde a la cara correspondiente de `bounding_boxes.npy`
           - `emociones.npy`: Cada fila es un individuo y cada columna una de las emociones (deben ser en el mismo orden de las caras en `bounding_boxes.npy`)
