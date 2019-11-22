@@ -27,6 +27,7 @@ def process_frame(image, method):
     else:
         raise NotImplementedError(f'Método {method} no existe')
 
+    # TODO: En el caso que sea un vector, corregir para que sea matriz
     return faces
 
 
@@ -36,6 +37,8 @@ def process_video(path, method):
     """
     # TODO: Obtener nombre de video a partir del path
     video_name = ''
+    # TODO: Crear carpeta si es que no existe (Deteccion/{method}/{video_name})
+    folder_path = f"Deteccion/{method}/{video_name}"
     try:
         cap = cv2.VideoCapture(path)
         # Check if camera opened successfully
@@ -47,15 +50,22 @@ def process_video(path, method):
         while(cap.isOpened()):
             # Capture frame-by-frame
             ret, frame = cap.read()
-        if ret is True:
-            faces = process_frame(frame, method)
-            # TODO: Acciones sobre caras detectadas
+            if ret is True:
+                # TODO: Crear carpeta del frame si es que no existe (Deteccion/{method}/{video_name}/{frame_name})
+                frame_name = f"frame_{frame_counter}"
 
-            frame_counter += 1
+                faces = process_frame(frame, method)
+                # TODO: Guardar bounding boxes
+                np.save(f"{folder_path}/{frame_name}/bounding_boxes.npy", faces)
 
-        # Break the loop
-        else:
-            break
+                # TODO: Guardar imagenes recortadas
+                for bb in faces:
+                    pass
+                frame_counter += 1
+
+            # Break the loop
+            else:
+                break
 
     finally:
         # When everything done, release the video capture object
