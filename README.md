@@ -3,14 +3,14 @@
 ## Estructura de archivos
 
 - Proyecto-Vision
-  - (código)
+  - **CÓDIGO**
   - [`dlib_detector.py`](main_deteccion.py): Código necesario para calcular los bounding boxes usando dlib
     - TO-DO: completar función `get_boxes`
   - [`retinaface_detector.py`](main_deteccion.py): Código necesario para calcular los bounding boxes usando RetinaFace
     - TO-DO: completar función `get_boxes`
   - [`main_deteccion.py`](main_deteccion.py): Procesar un video y crear los archivos correspondientes
     - TO-DO: completar funcion `process video`
-  - (carpetas)
+  - **CARPETAS**
   - `Videos`: Descargar de [drive](https://drive.google.com/drive/u/0/folders/1hHkDDtzuCoWAveTURGSAOugUBFF9jBZ7) y colocar en esta carpeta
   - `Deteccion`:
     - (Nombre de metodo de detección): Puede ser `RetinaFace` o `dlib`
