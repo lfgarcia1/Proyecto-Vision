@@ -6,7 +6,7 @@
   - (código)
   - `Videos`: Descargar de [drive](https://drive.google.com/drive/u/0/folders/1hHkDDtzuCoWAveTURGSAOugUBFF9jBZ7) y colocar en esta carpeta
   - `Deteccion`:
-    - (Nombre de metodo de detección): Puede ser `RetinaFace` o Arcface
+    - (Nombre de metodo de detección): Puede ser `RetinaFace` o `dlib`
       - (Nombre de video)
         - (Número de frame)
           - `bounding_boxes.npy`: Matriz donde las filas sean los bounding boxes de las caras, y las columnas sean: coordenada x de esquina sup izquierda, coordenada y de esquina sup izquierda, ancho y alto (en este orden)
