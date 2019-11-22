@@ -1,4 +1,4 @@
-# Contenido
+# Contenido
 
 Esta carpeta deberá contener los archivos procesados de los atributos (Descriptores, headpose, etc). Se estructurará _por frame_, es decir, se creará una carpeta para cada frame del video y esta carpeta contendrá la info de todos los atributos de la gente en el frame
 
